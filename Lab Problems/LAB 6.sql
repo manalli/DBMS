@@ -5,7 +5,7 @@ SELECT CONVERT(VARCHAR,GETDATE(),100);
 
 ------------------------------Math functions -------------------------------
 
---Part ñ A: 
+--Part ‚Äì A: 
 
 
 --1. Display the result of 5 multiply by 30. 
@@ -42,7 +42,7 @@ SELECT CONVERT(VARCHAR,GETDATE(),100);
 	SELECT RAND();
 
 
---Part ñ B: 
+--Part ‚Äì B: 
 
 CREATE TABLE EMP_MASTER(
 	EMP_NO INT,
@@ -73,7 +73,7 @@ SELECT * FROM EMP_MASTER;
 --5. Find out value of 23 raised to 2nd power and 14 raised 3rd power. 
 	SELECT POWER(23,2),POWER(14,3);
 
---Part ñ C: 
+--Part ‚Äì C: 
 
 --1. Find out the square root of 36, 49 and 81.
 	SELECT SQRT(36),SQRT(49),SQRT(81);
@@ -89,9 +89,9 @@ SELECT * FROM EMP_MASTER;
 
 -------------------------------String functions-----------------------------------
 
---Part ñ A: 
+--Part ‚Äì A: 
 
---1. Find the length of following. (I) NULL    (II) ë   hello     í   (III)  Blank 
+--1. Find the length of following. (I) NULL    (II) ‚Äò   hello     ‚Äô   (III)  Blank 
 	SELECT LEN(NULL),LEN('   HELLO    '),LEN('');
 --2. Display your name in lower & upper case. 
 	SELECT LOWER('MANALI'),UPPER('manali');
@@ -99,20 +99,20 @@ SELECT * FROM EMP_MASTER;
 	SELECT SUBSTRING('MANALI',1,3);
 --4. Display 3rd to 10th character of your name. 
 	SELECT SUBSTRING('SHATRUNJAY PRATAP SINH',3,10);
---5. Write a query to convert ëabc123efgí to ëabcXYZefgí & ëabcabcabcí to ëab5ab5ab5í using REPLACE.
+--5. Write a query to convert ‚Äòabc123efg‚Äô to ‚ÄòabcXYZefg‚Äô & ‚Äòabcabcabc‚Äô to ‚Äòab5ab5ab5‚Äô using REPLACE.
 	SELECT REPLACE('abc123efg','123','XYZ'), REPLACE('abcabcabc','C','5');
---6. Write a query to display ASCII code for ëaí,íAí,ízí,íZí, 0, 9. 
+--6. Write a query to display ASCII code for ‚Äòa‚Äô,‚ÄôA‚Äô,‚Äôz‚Äô,‚ÄôZ‚Äô, 0, 9. 
 	SELECT ASCII('a'),ASCII('A'),ASCII('z'),ASCII('Z'),ASCII('0'),ASCII('9');
 --7. Write a query to display character based on number 97, 65,122,90,48,57. 
 	SELECT CHAR(97),CHAR(65),CHAR(122),CHAR(90),CHAR(48),CHAR(57);
---8. Write a query to remove spaces from left of a given string ë hello world  ë.
+--8. Write a query to remove spaces from left of a given string ‚Äò hello world  ‚Äò.
 	SELECT LTRIM(' HELLO WORLD          ');
 	--SELECT TRIM('S','SSSSSHELLO WORLD');
---9. Write a query to remove spaces from right of a given string ë hello world  ë.
+--9. Write a query to remove spaces from right of a given string ‚Äò hello world  ‚Äò.
 	SELECT RTRIM('          HELLO WORLD  ');
---10. Write a query to display first 4 & Last 5 characters of ëSQL Serverí. 
+--10. Write a query to display first 4 & Last 5 characters of ‚ÄòSQL Server‚Äô. 
 	SELECT LEFT('SQL Server',4),RIGHT('SQL Server',5);
---11. Write a query to convert a string ë1234.56í to number (Use cast and convert function).
+--11. Write a query to convert a string ‚Äò1234.56‚Äô to number (Use cast and convert function).
 	SELECT CAST('1234.56' AS DECIMAL(6,2)), CONVERT(DECIMAL(6,2),'1234.56');
 --12. Write a query to convert a float 10.58 to integer (Use cast and convert function). 
 	SELECT CAST(10.58 AS int), CONVERT(int,10.58);
@@ -120,14 +120,14 @@ SELECT * FROM EMP_MASTER;
 	SELECT SPACE(10)+'MANALI';
 --14. Combine two strings using + sign as well as CONCAT ().
 	SELECT 'MANALI'+' AKBARI' AS USING_PLUS, CONCAT('MANALI',' AKBARI');
---15. Find reverse of ìDarshanî. 
+--15. Find reverse of ‚ÄúDarshan‚Äù. 
 	SELECT REVERSE('DARSHAN');
 --16. Repeat your name 3 times. 
 	SELECT REPLICATE('MANALI ',3);
 
 
 
---Part ñ B: Perform following queries on Student table of practical no 5. 
+--Part ‚Äì B: Perform following queries on Student table of practical no 5. 
 
 SELECT * FROM STUDENT;
 
@@ -144,7 +144,7 @@ SELECT * FROM STUDENT;
 
 
 
---Part ñ C: Perform following queries on Student table of practical no 5. 
+--Part ‚Äì C: Perform following queries on Student table of practical no 5. 
 
 SELECT * FROM STUDENT;
 
@@ -172,7 +172,7 @@ SELECT * FROM STUDENT;
 
 
 
---Part ñ A: 
+--Part ‚Äì A: 
 
 --1. Write a query to display the current date & time. Label the column Today_Date. 
 	SELECT GETDATE();
@@ -204,9 +204,9 @@ SELECT * FROM STUDENT;
 	SELECT DATEDIFF(YEAR,'14-JUN-05', GETDATE()) AS YEAR, DATEDIFF(MONTH,'14-JUN-05', GETDATE()) AS MONTH;
 
 
---Part ñ B:
+--Part ‚Äì B:
 
-CREATE TABLE EMP_DETAIL(
+CREATE TABLE EMP_DETAILS(
 	EMP_NO INT,
 	EMP_NAME VARCHAR(20),
 	JOINING_DATE DATE,
@@ -214,7 +214,7 @@ CREATE TABLE EMP_DETAIL(
 	CITY VARCHAR(25)
 );
 
-INSERT INTO EMP_DETAIL VALUES
+INSERT INTO EMP_DETAILS VALUES
 	(101,'KEYUR','2002-01-15',12000,'RAJKOT'),
 	(102,'HARDIK','2004-02-15',14000,'AHMEDABAD'),
 	(103,'KAJAL','2006-03-14',15000,'BARODA'),
@@ -222,20 +222,29 @@ INSERT INTO EMP_DETAIL VALUES
 	(105,'HARMIT','2004-02-15',14000,'RAJKOT'),
 	(106,'JAY','2007-03-12',12000,'SURAT');
 
-
-SELECT * FROM EMP_DETAIL;
+--DROP TABLE EMP_DETAILS;
+SELECT * FROM EMP_DETAILS;
 
 --1. Write a query to find new date after 365 day with reference to JoiningDate.
+	UPDATE EMP_DETAILS SET JOINING_DATE=DATEADD(DAY,365,JOINING_DATE);
 --2. Display the JoiningDate in a format that appears as may 5 1994 12:00AM. 
+	SELECT CONVERT(VARCHAR,JOINING_DATE,100) FROM EMP_DETAILS;
 --3. Display the JoiningDate in a format that appears as 03 Jan 1995. 
+	SELECT CONVERT(VARCHAR,JOINING_DATE,106) FROM EMP_DETAILS;
 --4. Display the JoiningDate in a format that appears as Jan 04, 96. 
+	SELECT CONVERT(VARCHAR,JOINING_DATE,7) FROM EMP_DETAILS;
 --5. Write a query to find out total number of months between JoiningDate and 31-Mar-09.
+	SELECT DATEDIFF(MONTH,2009-03-31,JOINING_DATE) FROM EMP_DETAILS;
 
-
---Part ñ C:  
+--Part ‚Äì C:  
 
 --1. Write a query to extract Day, Month, Year from JoiningDate. 
---2. Write a query that adds 5 years to JoiningDate. 
+	SELECT DATEPART(DAY,JOINING_DATE) AS DAY,DATEPART(MONTH,JOINING_DATE) AS MONTH,DATEPART(YEAR,JOINING_DATE) AS YEAR FROM EMP_DETAILS;
+--2. Write a query that adds 5 years to JoiningDate.
+	UPDATE EMP_DETAILS SET JOINING_DATE=DATEADD(YEAR,5,JOINING_DATE);
 --3. Write a query to subtract 2 months from JoiningDate. 
---4. Extract month from JoiningDate using datename () and datepart () function. 
+	UPDATE EMP_DETAILS SET JOINING_DATE=DATEADD(MONTH,-2,JOINING_DATE);
+--4. Extract month from JoiningDate using datename () and datepart () function.
+	SELECT DATENAME(MONTH,JOINING_DATE) AS DATENAME,DATEPART(MONTH,JOINING_DATE) AS DATEPART FROM EMP_DETAILS;
 --5. Calculate your age in years and months 
+	SELECT DATEDIFF(YEAR,'14-JUN-05', GETDATE()) AS YEAR, DATEDIFF(MONTH,'14-JUN-24', GETDATE()) AS MONTH;
